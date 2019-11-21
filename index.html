@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>Welcome to DataKernel</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 10);
+        }
+
+        @font-face {
+            font-family: "Lato";
+            src: url("Lato/Lato-Regular.ttf");
+        }
+
+        @font-face {
+            font-family: "Expressway";
+            src: url("Lato/ExpresswaySoft.ttf");
+        }
+
+        @font-face {
+            font-family: "ExpresswayBk";
+            src: url("Lato/ExpresswaySoftBk.ttf");
+        }
+
+        .slide {
+            font-family: "ExpresswayBk";
+            background: #fff3e5;
+            font-size: 1.8rem;
+        }
+
+        .slide code {
+            font-family: "Fira Code", "Retina", monospace;
+            font-size: 1.5rem;
+        }
+
+        .slide #worker {
+            font-family: "mononoki", "Regular", monospace;
+            font-size: 1.3rem;
+        }
+
+        .slide blockquote {
+            font-size: 1.5rem;
+        }
+
+        li::before {
+            content: close-quote;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        ul.dashed {
+            list-style-type: none;
+        }
+
+        ul.dashed>li {
+            text-indent: -5px;
+        }
+
+        ul.dashed>li:before {
+            content: "-";
+            text-indent: -5px;
+        }
+
+        #telegram {
+            font-family: "Fira Code", "Retina", monospace
+        }
+
+        #announcement {
+            font-size: 5rem;
+        }
+    </style>
+</head>
+
+<body class="shower list">
+    <header class="caption">
+        <h1>DataKernel. The best.</h1>
+    </header>
+
+    <section class="slide" id="cover">
+        <br>
+        <h2>DataKernel : </h2>
+        <h2>майструючи український фреймворк для highload</h2>
+        <style>
+            #cover h2 {
+                margin: 30px 0 0;
+                text-align: center;
+                font-size: 84px;
+            }
+
+            #cover p {
+                margin: 10px 0 0;
+                text-align: center;
+                /* color: white; */
+                font-style: italic;
+                font-size: 24px;
+            }
+
+            #cover p a {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="see-more">
+        <h2 class="shout">
+            <img src="pictures/talk.png" alt="QR Code" style="width: 400px; height: 400px;">
+        </h2>
+    </section>
+
+
+    <!-- INTRO -->
+    <section class="slide">
+        <figure>
+            <h2>О себе</h2>
+            <br>
+            <ul>
+                <li>Меня зовут Александр</li>
+                <li>Я Software Engineer в компании AdKernel</li>
+                <li>AdKernel : ряд продуктов по adserving и web-аналитике</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- OUR HISTORY -->
+    <section class="slide">
+        <figure>
+            <h2>Наша история. Начало</h2>
+            <ul>
+                <li>Ультимативная производительность каждого компонента</li>
+                <li>Threading модель, утилизирующая CPU по максимуму</li>
+                <li>... и в то же время, писать фактически однопоточный код</li>
+                <li>μ-сервисная архитектура с нагрузкой в 10-ки M RPS на сервере</li>
+                <li>Масштабируемость, отказоустойчивость, простота</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- DATAKERNEL -->
+    <section class="slide" id="chapter">
+        <h2 class="shout shrink">DataKernel</h2>
+    </section>
+
+    <!-- OVERALL - 2 -->
+    <section class="slide">
+        <h2>Познакомьтесь с DataKernel!</h2>
+        <table>
+            <th style="font-size: 2rem;" align="center">DataKernel - это</th>
+            <th style="font-size: 2rem;" align="center">И ни в коем случае, не</th>
+            <tr>
+                <td>Производительность</td>
+                <td>Раздутость</td>
+            </tr>
+            <tr>
+                <td>Минималистичность</td>
+                <td>Тонны абстракций</td>
+            </tr>
+            <tr>
+                <td>Legacy-free</td>
+                <td>Legacy</td>
+            </tr>
+            <tr>
+                <td>Уникальная threading модель</td>
+                <td>Сложности с concurrency</td>
+            </tr>
+            <tr>
+                <td>Взаимодополняемость модулей</td>
+                <td>Слои адаптеров</td>
+            </tr>
+            <tr>
+                <td>Универсальность</td>
+                <td>Узкая специализация</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- OVERALL -->
+    <section class="slide">
+        <figure>
+            <h2>Познакомьтесь с DataKernel!</h2>
+            <ul>
+                <li>Предназначен для создания всех видов веб-приложений :
+                    от веб - сайтов до распределенных highload систем</li>
+                <li>Эффективность доказана успехом в обработке сотен
+                    миллиардов запросов ежедневно в AdKernel</li>
+                <li>Прямой конкурент Spring и другим похожим инструментам</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="slide">
+        <figure style="margin-top: -2rem;">
+            <h2>Пара слов о достижениях</h2>
+            <ul>
+                <li>Быстрые HTTP сервера : <a
+                        href="https://github.com/softindex/datakernel/blob/master/examples/core/http/src/main/java/HttpServerWorkloadBenchmark.java">
+                        до 185 тысяч RPS</a></li>
+                <li><a
+                        href="https://github.com/softindex/datakernel/blob/master/examples/cloud/rpc/src/main/java/RpcBenchmark.java">
+                <li>До 18 М RPS</a> на одном ядре у RPC</li>
+                <li><a
+                        href="https://github.com/softindex/datakernel/blob/master/examples/cloud/rpc/src/main/java/MemcacheRpcBenchmark.java">
+                        До 10 М RPS</a> на одном ядре у memcached RPC</li>
+                <li><a
+                        href="https://github.com/softindex/datakernel/tree/master/examples/benchmarks/src/main/java/io/datakernel">
+                        Очень производительные компоненты</a> :
+                    <ul>
+                        <li>DI быстрее Guice и Spring DI</li>
+                        <li>Асинхронный примитив быстрее CompletableFuture</li>
+                        <li>Самые быстрые сериализаторы на JVM</li>
+                    </ul>
+                </li>
+                <li>Минималистичен : малый размер собранных JAR</li>
+
+            </ul>
+        </figure>
+    </section>
+
+    <!-- DATAKERNEL COMPONENTS GROUP -->
+    <section class="slide">
+        <figure style="font-size: 2.15rem;">
+            <h2>Группы компонентов</h2>
+            <ul>
+                <li><b>Core</b> : DI, Promise, Event Loop, ByteBuf, I/O, HTTP</li>
+                <li><b>Cloud</b> : RPC, FS, OT, Datalog, ETL, OLAP</li>
+                <li><b>Global Cloud</b> : internet-wide децентрализированная платформа приложений</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- DATAKERNEL COMPONENTS -->
+    <section class="slide" id="chapter">
+        <h2 class="shout shrink">Core Components</h2>
+    </section>
+
+    <!-- DATAKERNEL COMPONENTS : ALL -->
+    <section class="slide">
+        <figure>
+            <h2>Core Components</h2>
+            <div class="columns two">
+                <ul>
+                    <li>HTTP</li>
+                    <li>DI</li>
+                    <li>Promise</li>
+                    <li>Event Loop</li>
+                    <li>Worker Pool</li>
+                    <li>Service Graph</li>
+                    <li>Launcher</li>
+                    <li>ByteBuf</li>
+                </ul>
+                <ul>
+                    <li>CSP</li>
+                    <li>Datastream</li>
+                    <li>Codegen</li>
+                    <li>Serializer</li>
+                    <li>Configs</li>
+                    <li>Codec</li>
+                    <li>Net</li>
+                </ul>
+            </div>
+        </figure>
+    </section>
+
+    <!-- DATAKERNEL COMPONENTS : HTTP -->
+    <section class="slide">
+        <figure>
+            <h2>Core Components</h2>
+            <div class="columns two">
+                <ul>
+                    <li><b>HTTP</b></li>
+                    <li><b>DI</b></li>
+                    <li><b>Promise</b></li>
+                    <li><b>Event Loop</b></li>
+                    <li><b>Worker Pool</b></li>
+                    <li><b>Service Graph</b></li>
+                    <li><b>Launcher</b></li>
+                    <li>ByteBuf</li>
+                </ul>
+                <ul>
+                    <li>CSP</li>
+                    <li>Datastream</li>
+                    <li>Codegen</li>
+                    <li>Serializer</li>
+                    <li>Configs</li>
+                    <li>Codec</li>
+                    <li>Net</li>
+                </ul>
+            </div>
+        </figure>
+    </section>
+
+    <!-- DI -->
+    <section class="slide">
+        <figure>
+            <h2>Core : Dependency Injection</h2>
+            <ul>
+                <li>Компактность и быстрый старт</li>
+                <li>Максимальная производительность в рантайме!</li>
+                <li>Поддержка DSL как в Guice</li>
+                <li>Возможность интроспекции графа зависимостей</li>
+                <li>Поддержка scopes</li>
+                <li>Возможность расширения и написания плагинов</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- DI PIC -->
+    <section class="slide">
+        <figure>
+            <h2>Core: Worker Pool</h2>
+            <picture align="center">
+                <img src="pictures/di.png" style="width: 60%; padding-left: 10rem;"
+                    alt="Worker Pool with DI dependencies">
+            </picture>
+        </figure>
+    </section>
+
+    <!-- DI CODE - 1 -->
+    <section class="slide">
+        <h2>Core: DI (пример #1)</h2>
+        <figure>
+            <pre>
+                <code id="worker"><font color="#BA55D3">public void</font> cookingModule() {</code>
+                <code id="worker">    <font color="##7B68EE">Module</font> <b><i>cookbook</i></b> = <font color="##7B68EE">Module</font>.create()</code>
+                <code id="worker">        .bind(<font color="##7B68EE"><b>Sugar</b></font>.class) .to(<font color="##7B68EE">Sugar</font>::new)</code>
+                <code id="worker">        .bind(<font color="##7B68EE"><b>Butter</b></font>.class).to(<font color="##7B68EE">Butter</font>::new)</code>
+                <code id="worker">        .bind(<font color="##7B68EE"><b>Flour</b></font>.class) .to(<font color="##7B68EE">Flour</font>::new)</code>
+                <code id="worker">        .bind(<font color="##7B68EE"><b>Pastry</b></font>.class).to(<font color="##7B68EE">Pastry</font>::new,</code>
+                <code id="worker">               <font color="##7B68EE">Sugar</font>.class, <font color="##7B68EE">Butter</font>.class, <font color="##7B68EE">Flour</font>.class)</code>
+                <code id="worker">        .bind(<font color="##7B68EE"><b>Cookie</b></font>.class).to(<font color="##7B68EE"><b>Cookie</b></font>, <font color="##7B68EE">Pastry</font>.class)</code>
+                <code id="worker">    <font color="##7B68EE"><b>Injector</b></font> injector = <font color="##7B68EE">Injector</font>.of(<b><i>cookbook</i></b>);</code>
+                <code id="worker">    <font color="##7B68EE"><b>Cookie</b></font> cookie = injector.getInstance(Cookie.class);</code>
+                <code id="worker">}</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- DI CODE - 2 -->
+    <section class="slide">
+        <h2>Core: DI (пример #2)</h2>
+        <figure>
+            <pre>
+                <code id="worker"><font color="#BA55D3">public void</font> cookingModule() {</code>
+                <code id="worker">    <font color="##7B68EE">Module</font> <b><i>cookbook</i></b> = new <font color="##7B68EE">AbstractModule</font>();</code>
+                <code id="worker">    <font color="##7B68EE">@Provides</font></code>
+                <code id="worker">    <font color="##7B68EE">Sugar</font> sugar() { <font color="#BA55D3">return</font> new <font color="##7B68EE">Sugar</font>(); }</code>
+                <code id="worker">    </code>
+                <code id="worker">    <font color="##7B68EE">@Provides</font></code>
+                <code id="worker">    <font color="##7B68EE">Butter</font> butter() { <font color="#BA55D3">return</font> new <font color="##7B68EE">Butter</font>(); }</code>
+                <code id="worker">    ...</code>
+                <code id="worker">    <font color="##7B68EE">@Provides</font></code>
+                <code id="worker">    <font color="##7B68EE">Cookie</font> cookie(<font color="##7B68EE">Pastry</font> pastry) { <font color="#BA55D3">return</font> new <font color="##7B68EE">Cookie</font>(pastry); }</code>
+                <code id="worker">}</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- DI BENCHMARKS -->
+    <section class="slide">
+        <figure>
+            <h2>Core: Dependency Injection : быстро</h2>
+            <table style="font-size: 2.5rem;">
+                <th align="center">Бенчмарк</th>
+                <th style="padding-left: 10rem;" align="center">Результат</th>
+                <tr>
+                    <td>DataKernelDI</td>
+                    <td style="padding-right: 10rem;" align="right">
+                        <code style="font-size: 2rem;">138 ns/op</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>GuiceDiBenchmark</td>
+                    <td style="padding-right: 10rem;" align="right"><code style="font-size: 2rem;">780 ns/op</code></td>
+                </tr>
+                <tr>
+                    <td>SpringDiBenchmark</td>
+                    <td style="padding-right: 10rem;" align="right"><code style="font-size: 2rem;">75629 ns/op</code>
+                    </td>
+                </tr>
+            </table>
+        </figure>
+    </section>
+
+    <!-- EVENTLOOP -->
+    <section class="slide">
+        <figure>
+            <h2>Core: Eventloop</h2>
+            <ul>
+                <li>Менеджер асинхронных операций с очередью задач</li>
+                <li>Использует NIO для выполнения асинхронного I/O.</li>
+                <li>Максимизирует исполнение кода только на одном ядре</li>
+                <li>Бережно расходует и переиспользует память</li>
+                <li class="next">Достоин отдельного доклада, на самом деле &#128521;</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- EVENTLOOP CODE -->
+    <section class="slide">
+        <h2>Core: Eventloop - пример</h2>
+        <figure>
+            <pre>
+                <code id="worker"><font color="#BA55D3">public final class </font><font color="##7B68EE">EventloopExample</font> {</code>
+                <code id="worker">  <font color="#BA55D3">public static void</font> main(String[] args) <font color="#BA55D3">throws</font> Exception {</code>
+                    <code id="worker">      <font color="##7B68EE">Eventloop</font> eventloop = <font color="##7B68EE">Eventloop</font>.create();</code>
+                <code id="worker">      eventloop.post(() -> System.out.println(<font color="#6B8E23">"Hello World"</font>));</code>
+                <code id="worker"> </code>
+                <code id="worker">      eventloop.run();</code>
+                <code id="worker">  }</code>
+                <code id="worker">}</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- PROMISES -->
+    <section class="slide">
+        <figure>
+            <h2>Core: Promise</h2>
+            <ul>
+                <li>Лёгкая обёртка над состоянием асинхронного вычисления</li>
+                <li>Совместимы с <b>java.util.concurrent.CompletableFuture</b></li>
+                <li>Имеет более дружественный DSL</li>
+                <li><a
+                        href="https://github.com/softindex/datakernel/tree/master/examples/benchmarks/src/main/java/io/datakernel">
+                        Быстрее в 6-7 раз, чем СF</a>, благодаря интеграции с EventLoop и отсутствию многопоточного
+                    оверхеда.</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- HTTP OVERALL -->
+    <section class="slide">
+        <figure>
+            <h2>Core: HTTP</h2>
+            <ul>
+                <li>Упор на минимизацию latency</li>
+                <li>Доступны как HTTP <b>сервер</b>, так и <b>клиент</b></li>
+                <li>Полностью асинхронное и неблокирующее</li>
+                <li>Хитрый и производительный механизм обработки запроса</li>
+            </ul>
+            <div class="next" align="center">
+                <p align="right">
+                    <code style="font-size: 1.7rem;">DK benchmark (RPS) : 183k [#/sec] (mean)</code>
+                </p>
+                <p align="right">
+                    <code style="font-size: 1.7rem;">Vert.X benchmark (RPS) : 162k [#/sec] (mean)</code>
+                </p>
+            </div>
+        </figure>
+    </section>
+
+    <!-- HTTP EXAMPLE - 1 -->
+    <section class="slide">
+        <figure>
+            <h2>Core: HTTP (Пример #1)</h2>
+            <pre>
+                <code id="worker">  <font color="#BA55D3">public static void</font> main(String[] args) <font color="#BA55D3">throws</font> Exception {</code>
+                <code id="worker">      <font color="##7B68EE">Eventloop</font> eventloop = new <font color="##7B68EE">Eventloop</font>().create();</code>
+                <code id="worker">      <font color="##7B68EE">AsyncHttpServer</font> server = new <font color="##7B68EE">AsyncHttpServer</font>().create(eventloop, </code>
+                <code id="worker">          request -> ok200().withPlainText(<font color="#6B8E23">"Hello World"</font>))</code>
+                <code id="worker">          .withListenPort(8080);</code>
+                <code id="worker">      </code>
+                <code id="worker">      server.listen();</code>
+                <code id="worker">      eventloop.run();</code>
+                <code id="worker">  }</code>
+                <code id="worker">}</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- HTTP EXAMPLE - 2 -->
+    <section class="slide">
+        <figure>
+            <h2>Core: HTTP (Пример #2)</h2>
+            <pre>
+                <code id="worker">  <font color="#BA55D3">public static void</font> main(String[] args) <font color="#BA55D3">throws</font> Exception {</code>
+                <code id="worker">      <font color="##7B68EE">Module</font> <b><i>httpModule</i></b> = ...;</code>
+                <code id="worker">      <font color="##7B68EE">Injector</font> injector = <font color="##7B68EE">Injector</font>.of(<b><i>httpModule</i></b>);</code>
+                <code id="worker">      <font color="##7B68EE">Eventloop</font> eventloop = injector.getInstance(<font color="##7B68EE">Eventloop</font>.class);</code>
+                <code id="worker">      <font color="##7B68EE">AsyncHttpServer</font> server = injector.getInstance(<font color="##7B68EE">AsyncHttpServer</font>.class);</code>
+                <code id="worker">      </code>
+                <code id="worker">      server.listen();</code>
+                <code id="worker">      eventloop.run();</code>
+                <code id="worker">  }</code>
+                <code id="worker">}</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- LAUNCHER -->
+    <section class="slide">
+        <figure>
+            <h2>Core: Launcher</h2>
+            <ul>
+                <li>Технология, которая избавила нас от серверов приложений</li>
+                <li>Умная надстройка над <b> main </b> методом</li>
+                <li>“Клей” между main методом и Service Graph</li>
+                <li>Он же обеспечивает и производит и остановку приложения.</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- LAUNCHER EXAMPLES-->
+    <section class="slide">
+        <figure>
+            <h2>Core: Launcher - пример</h2>
+            <pre>
+                <code id="worker"><font color="#BA55D3">public void </font><font color="##7B68EE">launch</font>(<font color="##7B68EE">String[]</font> args)</font> {</code>
+                <code id="worker">  <font color="##7B68EE">Injector</font> injector = createInjector(args);</code>
+                <code id="worker">  <font color="##7B68EE">Set&lt;LauncherService&gt;</font> services = injector.getInstance(SERVICES);</code>
+                <code id="worker">  <font color="##7B68EE">Set&lt;LauncherService&gt;</font> startedServices = new HashSet&lt;&gt;();</code>
+                <code id="worker">  <font color="#BA55D3">try</font> {</code>
+                <code id="worker">      startServices(services, startedServices);</code>
+                <code id="worker">      run();</code>
+                <code id="worker">  } <font color="#BA55D3">finally</font> {</code>
+                <code id="worker">      stopServices(startedServices);</code>
+                <code id="worker">  }</code>
+                <code id="worker">}</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- SERVICE GRAPH -->
+    <section class="slide">
+        <figure>
+            <h2>Service Graph</h2>
+            <ul>
+                <li>Средство для старта / остановки сервисов приложения в
+                    соответствии с графом зависимостей</li>
+                <li>Обходит граф зависимостей in <b>postoder</b> way</li>
+                <li>Работает в сочетании с <b>Dependency Injection</b></li>
+                <li>Работает в многопоточном режиме!</li>
+                <li>Можно расширять собственными адаптерами</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- HTTP EXAMPLE - 3-1 -->
+    <section class="slide">
+        <figure>
+            <h2>Core: HTTP (Пример #3)</h2>
+            <pre>
+                <code id="worker"><font color="#BA55D3">public final class </font><font color="##7B68EE">HttpHelloWorldExample</font> <font color="#BA55D3">extends</font> <font color="##7B68EE">Launcher</font> {</code>
+                <code id="worker">    <font color="##7B68EE">@Provides</font> <font color="##7B68EE">Eventloop</font> eventloop() { <font color="#BA55D3">return</font> <font color="##7B68EE">Eventloop</font>.create(); }</code>
+                <code id="worker">    <font color="##7B68EE">@Provides</font> <font color="##7B68EE">AsyncServlet</font> servlet() { </code>
+                <code id="worker">      <font color="#BA55D3">return</font> request -> ok200().withPlainText("Hello from HTTP server");</code>
+                <code id="worker">    }</code>
+                <code id="worker">    <font color="##7B68EE">@Provides</font> <font color="##7B68EE">AsyncHttpServer</font> server(<font color="##7B68EE">Eventloop</font> el, <font color="##7B68EE">AsyncServlet</font> servlet) {</code>
+                <code id="worker">      <font color="#BA55D3">return</font> <font color="##7B68EE">AsyncHttpServer</font>.create(el, servlet).withListenPort(8080);</code>
+                <code id="worker">    }</code>
+                <code id="worker">  ... </code>
+                <code id="worker">}</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- HTTP EXAMPLE - 3-2 -->
+    <section class="slide">
+        <figure>
+            <h2>Core: HTTP (Пример #3)</h2>
+            <pre>
+                <code id="worker"><font color="#BA55D3">public final class </font><font color="##7B68EE">HttpHelloWorldExample</font> <font color="#BA55D3">extends</font> <font color="##7B68EE">Launcher</font> {</code>
+                <code id="worker">    ...</code>
+                <code id="worker">    <font color="##7B68EE">@Override</font> <font color="#BA55D3">protected</font> <font color="##7B68EE">Module</font> getModule() {</code>
+                <code id="worker">      <font color="#BA55D3">return</font> <font color="##7B68EE">ServiceGraphModule</font>.create();</code>
+                <code id="worker">    }</code>
+                <code id="worker">    <font color="##7B68EE">@Override</font> <font color="##7B68EE">void</font> run() { awaitShutdown(); }</code>
+                <code id="worker">     </code>
+                <code id="worker">  <font color="#BA55D3">public static void</font> main(String[] args) <font color="#BA55D3">throws</font> Exception {</code>
+                <code id="worker">      <font color="##7B68EE">Launcher</font> launcher = new <font color="##7B68EE">HttpHelloWorldExample</font>();</code>
+                <code id="worker">      launcher.launch(args);</code>
+                <code id="worker">} }</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- HTTP EXAMPLE - 4 -->
+    <section class="slide">
+        <figure>
+            <h2>Core: HTTP (Пример #4)</h2>
+            <pre>
+                <code id="worker"><font color="#BA55D3">public final class </font><font color="##7B68EE">HttpHelloWorldExample</font> <font color="#BA55D3">extends</font> <font color="##7B68EE">HttpServerLauncher</font> {</code>
+                <code id="worker">  <font color="##7B68EE">@Provides</font></code>
+                <code id="worker">  <font color="##7B68EE">AsyncServlet</font> servlet() {</code>
+                <code id="worker">      <font color="#BA55D3">return</font> request -> <font color="##7B68EE">Promise</font>.of(ok200().withPlainText(<font color="#6B8E23">"Hello World"</font>));</code>
+                <code id="worker">  }</code>
+                
+                <code id="worker">  <font color="#BA55D3">public static void</font> main(String[] args) <font color="#BA55D3">throws</font> Exception {</code>
+                <code id="worker">      <font color="##7B68EE">Launcher</font> launcher = new <font color="##7B68EE">HttpHelloWorldExample</font>();</code>
+                <code id="worker">      launcher.launch(args);</code>
+                <code id="worker">} }</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- DATAKERNEL COMPONENTS -->
+    <section class="slide" id="chapter">
+        <h2 class="shout shrink">Threading Model</h2>
+    </section>
+
+    <!-- WP : SINGLE-THREADED PIC -->
+    <section class="slide">
+        <figure>
+            <picture align="center">
+                <img src="pictures/SingleThreaded.svg" style="width: 90%; padding-left: 2.5rem; padding-top: 3rem;"
+                    alt="Worker Pool with DI dependencies">
+            </picture>
+        </figure>
+    </section>
+
+    <!-- THREADING MODEL : WP -->
+    <section class="slide">
+        <figure>
+            <h2>Threading model : Worker Pool</h2>
+            <ul>
+                <li>Параллелим приложения с помощью <b>Worker Pool</b></li>
+                <li>Получим N однопоточных приложений в одном процессе</li>
+                <li>Вешаем <code>@Provides и @Worker</code>,</li>
+                <li>подключаем <code>WorkerPoolModule</code>, и готово!</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- WORKER POOL EXAMPLE - 1 -->
+    <section class="slide">
+        <figure>
+            <h2>Core: Worker Pool (пример #1)</h2>
+            <pre>
+                <code id="worker"><font color="#BA55D3">public final class </font><font color="##7B68EE">WorkersExample</font> <font color="#BA55D3">extends</font> <font color="##7B68EE">MultithreadedHttpServerLauncher</font> {</code>
+                <code id="worker">  <font color="##7B68EE">@Provides</font></code>
+                <code id="worker">  <font color="##7B68EE">@Worker</font></code>
+                <code id="worker">  <font color="##7B68EE">AsyncServlet</font> servlet(<font color="##7B68EE">@WorkerId int</font> workerId) {</code>
+                <code id="worker">      <font color="#BA55D3">return</font> request -> <font color="##7B68EE">Promise</font>.of(ok200()</code>
+                <code id="worker">              .withPlainText(<font color="#6B8E23">"Hello from worker #"</font> + workerId + <font color="#6B8E23">"\n"</font>));</code>
+                <code id="worker">  }</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- WORKER POOL PIC -->
+    <section class="slide">
+        <figure>
+            <h2>Core: Worker Pool</h2>
+            <picture align="center">
+                <img src="pictures/WorkerPoolN.png" style="width: 75%; padding-left: 5rem;"
+                    alt="Worker Pool with DI dependencies">
+            </picture>
+        </figure>
+    </section>
+
+    <!-- WORKER POOL EXAMPLE - 2 -->
+    <section class="slide">
+        <figure>
+            <h2>Core: Worker Pool - Singleton shared state</h2>
+            <pre>
+                <code id="worker"><font color="#BA55D3">public final class </font><font color="##7B68EE">WorkersExample</font> <font color="#BA55D3">extends</font> <font color="##7B68EE">MultithreadedHttpServerLauncher</font> {</code>
+                <code id="worker">  <font color="##7B68EE">@Provides</font></code>
+                <code id="worker">  WeatherCache weather(...) { ... }</code>
+                <code id="worker">  </code>
+                <code id="worker">  <font color="##7B68EE">@Provides @Worker</font></code>
+                <code id="worker">  <font color="##7B68EE">AsyncServlet</font> servlet(<font color="##7B68EE">@WorkerId int</font> workerId, WeatherCache weather) {</code>
+                <code id="worker">      <font color="#BA55D3">return</font> request -> ok200().withJson(weather.getWeather(...))</code>
+                <code id="worker">  }</code>
+            </pre>
+        </figure>
+    </section>
+
+    <section class="slide">
+        <figure>
+            <h2>Core: Worker Pool (пример #2)</h2>
+            <br>
+            <picture align="center">
+                <img src="pictures/WorkerPoolSingletonDI.svg" style="width: 90%; height: 100%; padding-left: 2rem;"
+                    alt="Worker Pool with DI dependencies">
+            </picture>
+        </figure>
+    </section>
+
+    <section class="slide">
+        <h2>Threading model</h2>
+        <table style="margin-left: -7rem;">
+            <tr align="center">
+                <th scope="col">Feature</th>
+                <th style="padding-right: 1.5rem;">Multithreaded</th>
+                <th style="padding-right: 1.5rem;">Singlethread</th>
+                <th style="padding-right: 1.5rem;">N-threaded with DI</th>
+            </tr>
+            <tr align="center">
+                <th scope="row">Многопоточность</th>
+                <td>+</td>
+                <td>-</td>
+                <td>+</td>
+            </tr>
+            <tr align="center">
+                <th scope="row">Суммарный перфоманс</th>
+                <td>+</td>
+                <td>-</td>
+                <td>+</td>
+            </tr>
+            <tr align="center">
+                <th scope="row">Простота</th>
+                <td>-</td>
+                <td>+</td>
+                <td>+</td>
+            </tr>
+            <tr align="center">
+                <th scope="row">Оверхед на синхронизацию</th>
+                <td>-</td>
+                <td>+</td>
+                <td>+</td>
+            </tr>
+            <tr align="center">
+                <th scope="row">Минимизация latency</th>
+                <td>-</td>
+                <td>+</td>
+                <td>+</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- DATAKERNEL COMPONENTS : CORE + RPC -->
+    <section class="slide">
+        <figure>
+            <h2>Core Components</h2>
+            <div class="columns two">
+                <ul>
+                    <li><b>
+                            <font color="#634d2d">HTTP</font>
+                        </b></li>
+                    <li><b>
+                            <font color="#634d2d">DI</font>
+                        </b></li>
+                    <li><b>
+                            <font color="#634d2d">Promise</font>
+                        </b></li>
+                    <li><b>
+                            <font color="#634d2d">Event Loop</font>
+                        </b></li>
+                    <li><b>
+                            <font color="#634d2d">Worker Pool</font>
+                        </b></li>
+                    <li><b>
+                            <font color="#634d2d">Service Graph</font>
+                        </b></li>
+                    <li><b>
+                            <font color="#634d2d">Launcher</font>
+                        </b></li>
+                    <li>ByteBuf</li>
+                </ul>
+                <ul>
+                    <li><b>CSP</b></li>
+                    <li>Datastream</li>
+                    <li><b>Codegen</b></li>
+                    <li><b>Serializer</b></li>
+                    <li>Configs</li>
+                    <li>Codec</li>
+                    <li>Net</li>
+                </ul>
+            </div>
+        </figure>
+    </section>
+
+    <!-- CSP -->
+    <section class="slide">
+        <h2>Core : CSP</h2>
+        <ul>
+            <li>Communicating Sequential Processes
+                <ul>
+                    <li>Считывает данные из асинхронных каналов ввода</li>
+                    <li>Асинхронно обрабатывают их</li>
+                    <li>Записывает данные в асинхронных каналы вывода</li>
+                </ul>
+            </li>
+            <li>Можно сравнить с unix processes и unix pipes, но:
+                <ul>
+                    <li>Крайне легковесные (работают с нашими <b>Promises</b>)</li>
+                </ul>
+            </li>
+            <li>Комбинированная push-pull механика</li>
+        </ul>
+    </section>
+
+    <!-- CSP EXAMPLE -->
+    <section class="slide">
+        <figure>
+            <h2>Core: CSP - пример</h2>
+            <br>
+            <pre>
+                <code id="worker">  <font color="##7B68EE">ChannelSupplier</font>.ofSocket(SOCKET)</code>
+                <code id="worker">      .transformWith(<font color="##7B68EE">ChannelDeserializer</font>.create(SERIALIZER))</code>
+                <code id="worker">      .map(element -> element * 25)</code>
+                <code id="worker">      .filter(element -> element / 2 == 0)</code>
+                <code id="worker">      .transformWith(<font color="##7B68EE">ChannelSerializer</font>.create(SERIALIZER))</code>
+                <code id="worker">      .streamTo(<font color="##7B68EE">ChannelConsumer</font>.ofSocket(SOCKET));</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- CODEGEN -->
+    <section class="slide">
+        <figure>
+            <h2>Core : Codegen</h2>
+            <ul>
+                <li>Динамически генерирует классы, методы, etc.</li>
+                <li>Средство генерации результатов обработки пользовательских данных, например.</li>
+                <li>Применяется в сериализации и LSMT OLAP Cube</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- CODEGEN EXAMPLE - 1 -->
+    <section class="slide">
+        <figure>
+            <h2>Core: Codgen - пример</h2>
+            <pre>
+                <code id="worker" ><font color="#BA55D3">SELECT</font> <b>id, name, age</b> <font color="#BA55D3">FROM</font> users <font color="#BA55D3">WHERE</font> <b>age >= 18</b>;</code>
+            </pre>
+            <pre>
+                <code id="worker">  <font color="#BA55D3">class</font> <font color="##7B68EE">User</font> {</code>
+                <code id="worker">      <font color="#BA55D3">long</font> id;</code>
+                <code id="worker">      <font color="##7B68EE">String</font> name;</code>
+                <code id="worker">      <font color="#BA55D3">int </font>age;</code>
+                <code id="worker">  }</code>
+                <code id="worker">  <font color="#BA55D3">class</font> <font color="##7B68EE">UserPredicate</font> <font color="#BA55D3">implements</font>  <font color="##7B68EE">Predicate&lt;User&gt;</font> {</code>
+                <code id="worker">      <font color="#BA55D3">boolean</font> test (<font color="##7B68EE">User</font> user) {</code>
+                <code id="worker">          <font color="#BA55D3">return</font> user.age >= 18;</code>
+                <code id="worker">  }}</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- CODEGEN EXAMPLE - 1 -->
+    <section class="slide">
+        <figure>
+            <h2>Core: Codgen - пример</h2>
+            <pre>
+                <code id="worker" ><font color="#BA55D3">SELECT</font> <b>id, name, age</b> <font color="#BA55D3">FROM</font> users <font color="#BA55D3">WHERE</font> age >= 18;</code>
+            </pre>
+            <pre>
+                <code id="worker">  <font color="##7B68EE">Class&lt;?&gt;</font> <b><i>userClass</i></b> = <font color="##7B68EE">ClassBuilder</font>.create(<font color="##7B68EE">Object</font>.class)</code>
+                <code id="worker">      .withField(“id”, <font color="#BA55D3">long</font>.class)</code>
+                <code id="worker">      .withField(“name”, <font color="##7B68EE">String</font>.class)</code>
+                <code id="worker">      .withField(“age”, <font color="#BA55D3">int</font>.class)</code>
+                <code id="worker">      .build()</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- CODEGEN EXAMPLE - 1 -->
+    <section class="slide">
+        <figure>
+            <h2>Core: Codgen - пример</h2>
+            <pre>
+                <code id="worker" ><font color="#BA55D3">SELECT</font> id, name, age <font color="#BA55D3">FROM</font> users <font color="#BA55D3">WHERE</font> <b>age >= 18</b>;</code>
+            </pre>
+            <pre>
+                <code id="worker">  <font color="##7B68EE">Class&lt;Predicate&gt;</font> filter = <font color="##7B68EE">ClassBuilder</font>.create(<font color="##7B68EE">Predicate</font>.class)</code>
+                <code id="worker">      .withMethod(“test”, <font color="#BA55D3">boolean</font>.class, <b><i>userClass</i></b>, </code>
+                <code id="worker">                  cmpGe(property(arg(0), “age”), value(18)))</code>
+                <code id="worker">      .build()</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- SERIALIZERS -->
+    <section class="slide">
+        <figure>
+            <h2>Core : Serializer</h2>
+            <ul>
+                <li>Мы и сериализаторы ещё сделали &#128536;</li>
+                <li>Стабильный бинарный формат</li>
+                <li>Интеграция с живыми классами</li>
+                <li>Поддержка обратной совместимости</li>
+                <li>Поддержка Java сабклассов, массивов, коллекций и мап</li>
+                <li>Поддержка плагинов для специфических классов</li>
+                <li>Cериализаторы <b>генерируются в рантайме!</b></li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- SERIALIZERS EXAMPLE -->
+    <section class="slide">
+        <figure>
+            <h2>Core : Serializer - пример</h2>
+            <pre style="margin-top: 1rem;">
+                <code style="font-family:mononoki; font-size: 1.3rem;"><font color="#BA55D3">public static class</font> TestDataElement {
+    <font color="##7B68EE">@Serialize</font>(order = 1)
+    <font color="#BA55D3">public int</font> i;
+    <font color="##7B68EE">@Serialize</font>(order = 2)
+    <font color="#BA55D3">public String[]</font> strings;
+    <font color="##7B68EE">@Serialize</font>(order = 3)
+    <font color="##7B68EE">@SerializeVarLength</font>
+    <font color="#BA55D3">public long</font> vl = 0;
+}</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- SERIALIZERS SUPER FAST -->
+    <section class="slide">
+        <figure>
+            <br>
+            <br>
+            <br>
+            <p style="font-size: 2.75rem;" align="center"><b>Самые быстрые сериализаторы на JVM</b></p>
+            <br>
+        </figure>
+    </section>
+
+    <!-- SERIALIZERS PIC -->
+    <section class="slide">
+        <figure>
+            <h2 style="margin-top:-4rem;">Serializer : сравнение</h2>
+            <picture>
+                <a href="https://github.com/softindex/jvm-serializers/tree/dk-update">
+                    <img style="width: 850px; height: 500px;" src="pictures/dk-serializers.png"></a>
+            </picture>
+        </figure>
+    </section>
+
+    <!-- SERIALIZERS TABLE -->
+    <section class="slide">
+        <h2>Поподробнее, пожалуйста</h2>
+        <br>
+        <table>
+            <tr>
+                <th scope="col">Фреймворк</th>
+                <th>Serialize, ns</th>
+                <th>Deserialize, ns</th>
+                <th>Сумма, ns</th>
+            </tr>
+            <tr>
+                <th scope="row">DataKernel</th>
+                <td>188</td>
+                <td>268</td>
+                <td>456</td>
+            </tr>
+            <tr>
+                <th scope="row">Colfer</th>
+                <td>243</td>
+                <td>334</td>
+                <td>577</td>
+            </tr>
+            <tr>
+                <th scope="row">Kryo</th>
+                <td>335</td>
+                <td>479</td>
+                <td>814</td>
+            </tr>
+            <tr>
+                <th scope="row">Protobuf</th>
+                <td>350</td>
+                <td>933</td>
+                <td>1273</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- DATAKERNEL COMPONENTS : ALL -->
+    <section class="slide">
+        <figure>
+            <h2>Core Components</h2>
+            <div class="columns two">
+                <ul>
+                    <li><b>HTTP</b></li>
+                    <li><b>DI</b></li>
+                    <li><b>Promise</b></li>
+                    <li><b>Event</b> Loop</li>
+                    <li><b>Worker</b> Pool</li>
+                    <li><b>Service</b> Graph</li>
+                    <li><b>Launcher</b></li>
+                    <li>ByteBuf</li>
+                </ul>
+                <ul>
+                    <li><b>CSP</b></li>
+                    <li>Datastream</li>
+                    <li><b>Codegen</b></li>
+                    <li><b>Serializer</b></li>
+                    <li>Configs</li>
+                    <li>Codec</li>
+                    <li>Net</li>
+                </ul>
+            </div>
+        </figure>
+    </section>
+
+    <!-- DATAKERNEL COMPONENTS -->
+    <section class="slide" id="chapter">
+        <h2 class="shout shrink">Cloud Components RPC</h2>
+    </section>
+
+    <!-- DATAKERNEL COMPONENTS : CORE + RPC -->
+    <section class="slide">
+        <figure>
+            <h2>Core Components</h2>
+            <div class="columns two">
+                <ul>
+                    <li><b>RPC</b></li>
+                    <li><b>Memcached RPC</b></li>
+                    <li><b>FS</b></li>
+                    <li>LSMT OLAP Cube</li>
+                    <li>LSMT Aggregation</li>
+                </ul>
+                <ul>
+                    <li>Datastream</li>
+                    <li>CRDT</li>
+                    <li>ETL</li>
+                    <li>Multilog</li>
+                </ul>
+            </div>
+        </figure>
+    </section>
+
+    <!-- RPC -->
+    <section class="slide">
+        <figure>
+            <h2>Cloud: RPC</h2>
+            <ul>
+                <li>Написаны готовые решения c помощью RPC</li>
+                <li>Поддерживается много вкусных стратегий отправки</li>
+                <li><b>Шардирование</b> и оптимизированный <b>rendezvous hashing</b></li>
+                <li>На отдельных ворклоадах выдавало до 18M RPS</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- RPC EXAMPLE - 1 -->
+    <section class="slide">
+        <figure>
+            <h2>Cloud: RPC - пример</h2>
+            <pre>
+                <code id="worker">  <font color="##7B68EE">@Provides</font></code>
+                <code id="worker">  <font color="##7B68EE">RpcStrategy</font> rpcStrategy() {</code>
+                <code id="worker">      <font color="##7B68EE">List&lt;InetSocketAddress&gt;</font> inetAddresses = ...;</code>
+                <code id="worker">      <font color="#BA55D3">return</font> <b>firstAvailable</b>(</code>
+                <code id="worker">          <b>rendezvousHashing</b>(Object::hashCode)</b></code>
+                <code id="worker">              .withShard(1, server(inetAddresses.get(0)))</code>
+                <code id="worker">              .withShard(2, server(inetAddresses.get(1)))</code>
+                <code id="worker">          <b>rendezvousHashing</b>(Object::hashCode)</b></code>
+                <code id="worker">              .withShard(1, server(inetAddresses.get(2)))</code>
+                <code id="worker">              .withShard(2, server(inetAddresses.get(3))));</code>
+                <code id="worker">  }</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- RPC Example -->
+    <section class="slide">
+        <figure>
+            <h2>Core: RPC стратегии - наглядно</h2>
+            <figure align="center">
+                <picture>
+                    <img src="pictures/rpc-strategy-example.png" style="width: 80%;"
+                        alt="HTTP Request Handling Diagram">
+                </picture>
+            </figure>
+        </figure>
+    </section>
+
+    <!-- MEMCACHED RPC -->
+    <section class="slide">
+        <figure>
+            <h2>Memcached RPC</h2>
+            <ul>
+                <li>Memcached-подобная in-memory БД с общением по RPC</li>
+                <li>Устроена на кольцевых массивах байт</li>
+                <li>Обладает всеми преимуществами Cloud: RPC</li>
+                <li>На пике выдавало до 10M RPS</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- MEMCACHED RPC -->
+    <section class="slide">
+        <figure>
+            <h2>FS (File Storage)</h2>
+            <ul>
+                <li><b>А</b>синхронная абстракция поверх локальной FS</li>
+                <li><b>А</b>синхронная абстракция поверх удаленной FS (с простым FTP-подобным протоколом с zero-overhead
+                    стримингом)</li>
+                <li><b>К</b>ак и RPC, содержит комбинируемый набор стратегий</li>
+                <li><b>В</b>озможность комбинирования в кластерную отказоустойчивую FS с репартиционированием
+                    и ребалансировкой</li>
+                <li>... - простая альтернатива для kernel-space distributed FS (ceph и другие)</li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- FS EXAMPLE - 1 -->
+    <section class="slide">
+        <figure>
+            <h2>Cloud: FS - пример</h2>
+            <pre>
+                <code id="worker">   <font color="#BA55D3">private </font><font color="##7B68EE">RemoteFsClusterClient</font> client = ...;</code>
+                <code id="worker">      ...</code>
+                <code id="worker">      <font color="##7B68EE">Eventloop</font> eventloop = <font color="##7B68EE">Eventloop</font>.create();</code>
+                <code id="worker">      <font color="##7B68EE">Map&lt;Object, FsClient&gt;</font> clients = ...;</code>
+                <code id="worker">  </code>
+                <code id="worker">      client = <font color="##7B68EE">RemoteFsClusterClient</font>.create(eventloop, clients)</code>
+                <code id="worker">          .withReplicationCount(<b>N / 2</b>)</code>
+                <code id="worker">          .withServerSelector(<b>RENDEZVOUS_HASH_SHARDER</b>);</code>
+                <code id="worker">  }</code>
+            </pre>
+        </figure>
+    </section>
+
+    <!-- FS Example -->
+    <section class="slide">
+        <figure>
+            <h2>Cloud: FS - иллюстрация</h2>
+            <figure align="center">
+                <picture>
+                    <img src="pictures/fs.png" style="width: 90%;" alt="HTTP Request Handling Diagram">
+                </picture>
+            </figure>
+        </figure>
+    </section>
+
+    <!-- DATAKERNEL COMPONENTS : END -->
+    <section class="slide">
+        <figure>
+            <h2>Core Components</h2>
+            <div class="columns two">
+                <ul>
+                    <li><b>RPC</b></li>
+                    <li><b>Memcached RPC</b></li>
+                    <li><b>FS</b></li>
+                    <li>LSMT OLAP Cube</li>
+                    <li>LSMT Aggregation</li>
+                </ul>
+                <ul>
+                    <li>Datastream</li>
+                    <li>CRDT</li>
+                    <li>ETL</li>
+                    <li>Multilog</li>
+                </ul>
+            </div>
+        </figure>
+    </section>
+
+    <!-- А ТАКЖЕ -->
+    <section class="slide">
+        <figure>
+            <h2>А также у нас припасено</h2>
+            <ul>
+                <li>Сloud : FS, операционные трансформации</li>
+                <li>Сloud: Dataflow, CRDT, ETL, OLAP</li>
+                <li>Встроенные средства мониторинга через JMX</li>
+                <li>Интеграция с Zabbix-подобными сервисами</li>
+                <li class="next">Децентрализованные базы данных прямо на DataKernel </li>
+                <li class="next"><b>LSM OLAP Cube</b></li>
+            </ul>
+        </figure>
+    </section>
+
+    <!-- Summary -->
+    <section class="slide">
+        <figure style="font-size: 1.7rem;">
+            <h2>Summary : наш опыт</h2>
+            <ul>
+                <li>Был создан конкурентный all-in-one фреймворк</li>
+                <li>DataKernel переосмыслил подход программирования на Java</li>
+                <li>Связка хорошей CS подготовки со внушительным опытом разработки способна сгенерировать достойный
+                    продукт</li>
+                <li>Разработчики довольны как процессом разработки, так и результатом</li>
+                <li class="next">Попробуйте DataKernel, присылайте обратную связь</li>
+                <li class="next"><b>PR are welcomed</b> ☺️</li>
+            </ul>
+        </figure>
+    </section>
+
+    <section class="slide" id="see-more">
+        <h2 class="shout">
+            <img src="pictures/twitter.png" alt="Telegram logo" style="width: 200px; height: 150px;">
+            <div id="telegram">@FlyCreat1ve</div>
+        </h2>
+    </section>
+
+    <section class="slide" id="see-more">
+        <h2 class="shout">
+            <img src="pictures/twitter.png" alt="Telegram logo" style="width: 200px; height: 150px;">
+            <div id="telegram">@datakernel_io</div>
+        </h2>
+    </section>
+
+    <section class="slide" id="see-more">
+        <h2 class="shout">
+            <img src="pictures/qr-code.png" alt="QR Code" style="width: 450px; height: 450px;">
+        </h2>
+    </section>
+
+    <section class="slide" id="see-more">
+        <h2 class="shout">
+            <p>Спасибо за внимание!</p>
+            <p>Вопросы?</p>
+
+        </h2>
+        <style>
+            #see-more h2 {
+                font-size: 72px
+            }
+
+            #see-more img {
+                width: 0.72em;
+                height: 0.72em;
+            }
+        </style>
+    </section>
+
+    <footer class="badge">
+        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 2019 AdKernel LLC -->
+
+</body>
+
+</html>
